@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Nav.css">
+    <title>Nvidia Clone</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="right-side">
+                <div class="nav-logo">
+                    <a href="#">
+                        <img src="icons/Nvidia_logo.png" alt="NVIDIA Logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="products-nav" class="active" onclick="switch_dropdown('products')">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="solutions-nav" onclick="switch_dropdown('solutions')">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="industries-nav" onclick="switch_dropdown('industries')">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="foryou-nav" onclick="switch_dropdown('foryou')">For You</a>
+                        </li>
+                    </ul>
+                    <div class="products-dropdown" id="products-dropdown">
+                        <div class="dropdown-header">
+                            <h4 class="header-item1">
+                                <a href="#" id="hardware-link" class="active" onclick="switch_dropdown('hardware')">Hardware</a>
+                            </h4>
+                            <h4 class="header-item2">
+                                <a href="#" id="software-link" onclick="switch_dropdown('software')">Software</a>
+                            </h4>  
+                        </div>
+                        <div class="sections-container" id="toggle-hardware" style="display: flex;">
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Gaming and Creating</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce Graphics Cards</li>
+                                    <li>Laptops</li>
+                                    <li>G-SYNC Monitors</li>
+                                    <li>Studio</li>
+                                    <li>SHIELD TV</li>
+                                    <li>RTX AI PCs</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Laptops and Workstations</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Laptops</li>
+                                    <li>NVIDIA RTX in Desktop Workstations</li>
+                                    <li>NVIDIA RTX in Professional Laptops</li>
+                                    <li>NVIDIA RTX-Powered AI Workstations</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Cloud and Data Center</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>Grace CPU</li>
+                                    <li>DGX Platform</li>
+                                    <li>EGX Platform</li>
+                                    <li>IGX Platform</li>
+                                    <li>HGX Platform</li>
+                                    <li>NVIDIA MGX</li>
+                                    <li>NVIDIA OVX</li>
+                                    <li>DRIVE Sim</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Networking</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>DPUs and SuperNICs</li>
+                                    <li>Ethernet</li>
+                                    <li>InfiniBand</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">GPUs</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce</li>
+                                    <li>NVIDIA RTX / Quadro</li>
+                                    <li>Data Center</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Embedded Systems</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sections-container" id="toggle-software" style="display: none;">
+                            <div class="dropdown-section">
+                                    <span class="list-item-header">Application Frameworks</span>
+                                        <hr class="dropdown-divider">
+                                    <div class="dropdown-section-lists">
+                                        <ul>
+                                            <li>GeForce Graphics Cards</li>
+                                            <li>Laptops</li>
+                                            <li>G-SYNC Monitors</li>
+                                            <li>Studio</li>
+                                            <li>SHIELD TV</li>
+                                            <li>RTX AI PCs</li>
+                                        </ul>
+                                        <ul>
+                                            <li>GeForce Graphics Cards</li>
+                                            <li>Laptops</li>
+                                            <li>G-SYNC Monitors</li>
+                                            <li>Studio</li>
+                                            <li>SHIELD TV</li>
+                                            <li>RTX AI PCs</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Apps and Tools</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Gaming and Creating</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Infrastructure</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Cloud Services</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solutions-dropdown" id="solutions-dropdown">
+                        <div class="sections-container" id="toggle-solutions" style="display: flex;">
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Artificial Intelligence</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce Graphics Cards</li>
+                                    <li>Laptops</li>
+                                    <li>G-SYNC Monitors</li>
+                                    <li>Studio</li>
+                                    <li>SHIELD TV</li>
+                                    <li>RTX AI PCs</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Data Center and Cloud Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Laptops</li>
+                                    <li>NVIDIA RTX in Desktop Workstations</li>
+                                    <li>NVIDIA RTX in Professional Laptops</li>
+                                    <li>NVIDIA RTX-Powered AI Workstations</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Design and Simulation</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>Grace CPU</li>
+                                    <li>DGX Platform</li>
+                                    <li>EGX Platform</li>
+                                    <li>IGX Platform</li>
+                                    <li>HGX Platform</li>
+                                    <li>NVIDIA MGX</li>
+                                    <li>NVIDIA OVX</li>
+                                    <li>DRIVE Sim</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Robotics and Edge Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>DPUs and SuperNICs</li>
+                                    <li>Ethernet</li>
+                                    <li>InfiniBand</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">High-Performance Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce</li>
+                                    <li>NVIDIA RTX / Quadro</li>
+                                    <li>Data Center</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Self-Driving Vehicles</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="industries-dropdown" id="industries-dropdown">
+                        <div class="sections-container" id="toggle-solutions" style="display: flex;">
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Artificial Intelligence</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce Graphics Cards</li>
+                                    <li>Laptops</li>
+                                    <li>G-SYNC Monitors</li>
+                                    <li>Studio</li>
+                                    <li>SHIELD TV</li>
+                                    <li>RTX AI PCs</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Data Center and Cloud Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Laptops</li>
+                                    <li>NVIDIA RTX in Desktop Workstations</li>
+                                    <li>NVIDIA RTX in Professional Laptops</li>
+                                    <li>NVIDIA RTX-Powered AI Workstations</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Design and Simulation</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>Grace CPU</li>
+                                    <li>DGX Platform</li>
+                                    <li>EGX Platform</li>
+                                    <li>IGX Platform</li>
+                                    <li>HGX Platform</li>
+                                    <li>NVIDIA MGX</li>
+                                    <li>NVIDIA OVX</li>
+                                    <li>DRIVE Sim</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Robotics and Edge Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Overview</li>
+                                    <li>DPUs and SuperNICs</li>
+                                    <li>Ethernet</li>
+                                    <li>InfiniBand</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">High-Performance Computing</li>
+                                    <hr class="dropdown-divider">
+                                    <li>GeForce</li>
+                                    <li>NVIDIA RTX / Quadro</li>
+                                    <li>Data Center</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-section">
+                                <ul>
+                                    <li class="list-item-header">Self-Driving Vehicles</li>
+                                    <hr class="dropdown-divider">
+                                    <li>Jetson</li>
+                                    <li>DRIVE AGX</li>
+                                    <li>Clara AGX</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-side">
+                <div class="nav-actions">
+                    <a href="#" class="nav-action-link">Shop</a>
+                    <a href="#" class="nav-action-link">Drivers</a>
+                    <a href="#" class="nav-action-link">Support</a>
+                    <a href="#" class="nav-action-link"><img src="icons/search icon.png" alt="Search Icon"></a>
+                    <a href="#" class="nav-action-link"><img src="icons/profile icon.png" alt="Profile Icon"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        //nav list items
+        
+        //products nav items
+        document.getElementById('products-nav').addEventListener('click', function(event) {
+            event.preventDefault();
+            var productsDiv = document.getElementById('products-dropdown');
+            productsDiv.classList.toggle('visible');
+        });
+
+        document.getElementById('products-dropdown').addEventListener('click', function(event){
+            event.stopPropagation();
+        });
+
+        function switch_dropdown(section){
+            var hardwareSection=document.getElementById('toggle-hardware');
+            var softwareSection=document.getElementById('toggle-software');
+
+            var hardwareLink=document.getElementById('hardware-link');
+            var softwareLink=document.getElementById('software-link');
+
+            if(section==='hardware'){
+                hardwareSection.style.display='flex';
+                softwareSection.style.display='none';
+                hardwareLink.classList.add('active');
+                softwareLink.classList.remove('active');
+            }else if(section==='software'){
+                hardwareSection.style.display='none';
+                softwareSection.style.display='flex';
+                hardwareLink.classList.remove('active');
+                softwareLink.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
